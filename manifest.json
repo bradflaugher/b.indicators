@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "brad.indicators",
-  "name": "My Indicators",
+  "id": "b.indicators",
+  "name": "b.indicators",
   "version": "1.0.0",
   "author": "Brad Flaugher",
   "description": "Hover indicators with screenshot and Google Tasks",
@@ -12,7 +12,7 @@
     "barWidget": "Indicators.qml"
   },
   "barWidget": {
-    "displayName": "My Indicators",
+    "displayName": "b.indicators",
     "description": "Hover indicators with screenshot and Google Tasks",
     "category": "Status",
     "allowMultiple": true,
