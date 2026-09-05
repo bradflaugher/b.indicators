@@ -8,17 +8,17 @@ BarIndicator {
   property string state: "idle"
   property string icon: ""
 
-  active: state === "recording"
+  active: state === "recording" || state === "transcribing"
   activeText: icon
-  inactiveText: "󰍬"
-  activeTooltipText: "Recording — click to stop (or release F9)"
-  inactiveTooltipText: "Dictate — click, hold F9, or Super+Ctrl+X"
+  inactiveText: "󰅬"
+  activeTooltipText: state === "transcribing" ? "Transcribing" : "Recording — click to stop"
+  inactiveTooltipText: "Dictate · click to start · right-click settings"
 
   function update(raw) {
     var data = extractData(raw)
 
     state = String(data.alt || data.class || "idle")
-    if (state === "recording") icon = "󰍬"
+    if (state === "recording") icon = "󰅬"
     else if (state === "transcribing") icon = "󰔟"
     else icon = ""
   }
@@ -36,7 +36,11 @@ BarIndicator {
     command: ["voxtype", "record", "toggle"]
   }
 
-  onPressed: function() {
+  onPressed: function(button) {
+    if (button === Qt.RightButton) {
+      if (root.bar) root.bar.run("omarchy-voxtype-config")
+      return
+    }
     if (toggleProc.running) toggleProc.running = false
     toggleProc.running = true
   }
