@@ -10,7 +10,7 @@ BarIndicator {
 
   active: state === "recording" || state === "transcribing"
   activeText: icon
-  inactiveText: "󰅬"
+  inactiveText: "\U000f036c"
   activeTooltipText: state === "transcribing" ? "Transcribing" : "Recording — click to stop"
   inactiveTooltipText: "Dictate · click to start · right-click settings"
 
@@ -18,8 +18,8 @@ BarIndicator {
     var data = extractData(raw)
 
     state = String(data.alt || data.class || "idle")
-    if (state === "recording") icon = "󰅬"
-    else if (state === "transcribing") icon = "󰔟"
+    if (state === "recording") icon = "\U000f036c"
+    else if (state === "transcribing") icon = "\U000f051f"
     else icon = ""
   }
 
