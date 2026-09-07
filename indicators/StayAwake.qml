@@ -1,20 +1,12 @@
 import QtQuick
-import qs.Ui
+import Quickshell
 
-BarIndicator {
-  id: root
-
-  readonly property var idleService: bar?.shell?.firstPartyServiceFor("omarchy.idle")
-
-  active: idleService ? idleService.stayAwake : false
+ToggleCommand {
+  toggleCommand: "omarchy-toggle-idle"
+  statusCommand: "omarchy-toggle-idle status"
+  watchPath: Quickshell.env("HOME") + "/.local/state/omarchy/indicators"
   activeText: "󰅶"
   inactiveText: "󰅶"
   activeTooltipText: "Allow Idle Lock & Screensaver"
   inactiveTooltipText: "Stay Awake"
-
-  function toggle() {
-    if (root.idleService) root.idleService.setIdleEnabled(root.active)
-  }
-
-  onPressed: function() { root.toggle() }
 }

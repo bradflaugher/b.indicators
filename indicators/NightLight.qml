@@ -1,20 +1,12 @@
 import QtQuick
-import qs.Ui
 
-BarIndicator {
-  id: root
-
-  readonly property var nightlightService: bar?.shell?.firstPartyServiceFor("omarchy.nightlight")
-
-  active: nightlightService ? nightlightService.enabled : false
+ToggleCommand {
+  toggleCommand: "omarchy-toggle-nightlight"
+  statusCommand: "omarchy-toggle-nightlight --status"
+  statusInterval: 2000
+  statusRetryMs: 1500
   activeText: "󰔎"
   inactiveText: "󰔎"
   activeTooltipText: "Day Light"
   inactiveTooltipText: "Night Light"
-
-  function toggle() {
-    if (root.nightlightService) root.nightlightService.setNightlight(!root.active)
-  }
-
-  onPressed: function() { root.toggle() }
 }
