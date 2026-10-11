@@ -1,10 +1,8 @@
 # b.indicators
 
-Personal Omarchy hover indicators. This is a clone of `omarchy.indicators` with two extras, plus a dictation click that actually records:
+Personal Omarchy hover indicators. This is a clone of `omarchy.indicators` with a screenshot button added, and without the dictation and reminder indicators:
 
 - **Screenshot** — left-click takes a screenshot, right-click opens the capture menu
-- **Reminder** — opens [Google Tasks](https://tasks.google.com/)
-- **Dictation** — click toggles Voxtype, right-click opens Voxtype settings
 
 Screen recording, night light, do-not-disturb, and stay-awake sit in the same hover row.
 
@@ -18,7 +16,7 @@ Stay awake, night light, and do-not-disturb must use `ToggleCommand` in
 `indicators/ToggleCommand.qml`, which calls the public commands
 (`omarchy-toggle-idle`, `omarchy-toggle-nightlight`,
 `omarchy-toggle-notification-silencing`) via `Quickshell.execDetached` — the
-same path Screenshot and Reminder already use.
+same path Screenshot already uses.
 
 If you re-clone `omarchy.indicators` or paste stock indicator QML into this
 repo, replace any `firstPartyServiceFor` usage with `ToggleCommand` or the

@@ -5,7 +5,7 @@ import qs.Ui
 
 // Shared click/status path for cloned indicators. Third-party bar-widgets do
 // not receive first-party service proxies, so actions go through public
-// commands the same way Screenshot and Reminder do.
+// commands the same way Screenshot does.
 BarIndicator {
   id: root
 

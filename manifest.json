@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "id": "b.indicators",
   "name": "b.indicators",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Brad Flaugher",
-  "description": "Hover indicators with screenshot and Google Tasks",
+  "description": "Hover indicators with a screenshot button",
   "kinds": [
     "bar-widget"
   ],
@@ -13,7 +13,7 @@
   },
   "barWidget": {
     "displayName": "b.indicators",
-    "description": "Hover indicators with screenshot and Google Tasks",
+    "description": "Hover indicators with a screenshot button",
     "category": "Status",
     "allowMultiple": true,
     "schema": [
@@ -27,11 +27,6 @@
         "emptyText": "No indicators",
         "options": [
           {
-            "value": "Dictation",
-            "label": "Dictation",
-            "description": "Voice typing status"
-          },
-          {
             "value": "Screenshot",
             "label": "Screenshot",
             "description": "Take a screenshot"
@@ -40,11 +35,6 @@
             "value": "ScreenRecording",
             "label": "Screen recording",
             "description": "GPU screen recorder status"
-          },
-          {
-            "value": "Reminder",
-            "label": "Google Tasks",
-            "description": "Opens Google Tasks"
           },
           {
             "value": "NightLight",
