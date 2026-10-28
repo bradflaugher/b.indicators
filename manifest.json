@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "b.indicators",
   "name": "b.indicators",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Brad Flaugher",
   "description": "Hover indicators with a screenshot button",
   "kinds": [
@@ -26,6 +26,11 @@
         "placeholderText": "Search indicators...",
         "emptyText": "No indicators",
         "options": [
+          {
+            "value": "PasswordlessSudo",
+            "label": "Passwordless sudo",
+            "description": "Warning while passwordless root access is enabled"
+          },
           {
             "value": "Screenshot",
             "label": "Screenshot",

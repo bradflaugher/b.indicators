@@ -3,6 +3,7 @@
 Personal Omarchy hover indicators. This is a clone of `omarchy.indicators` with a screenshot button added, and without the dictation and reminder indicators:
 
 - **Screenshot** — left-click takes a screenshot, right-click opens the capture menu
+- **Passwordless sudo** — opens the `omarchy-sudo-passwordless` prompt when inactive; shows an urgent warning icon and disables on click while active
 
 Screen recording, night light, do-not-disturb, and stay-awake sit in the same hover row.
 
